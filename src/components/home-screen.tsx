@@ -1,6 +1,7 @@
 "use client";
 import { Menu, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import PlacesView from "@/components/place-view/places-view"
 
 interface HomeScreenProps {
   onMenuToggle: () => void;
@@ -76,26 +77,7 @@ export default function HomeScreen({
       </div>
 
       {/* Venue Grid */}
-      <div className="px-4 mb-8">
-        <div className="flex space-x-4 overflow-x-auto">
-          {[1, 2, 3,4 ].map((index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-32 bg-white/10 rounded-lg overflow-hidden"
-            >
-              <img
-                src="/placeholder.svg?height=120&width=120"
-                alt="Casa Bar"
-                className="w-full h-24 object-cover"
-              />
-              <div className="p-2">
-                <h3 className="text-white font-medium text-sm">Casa Bar</h3>
-                <p className="text-white/70 text-xs">cocktails bar</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <PlacesView/>
 
       {/* Navigation Arrows */}
       <div className="flex justify-between px-8 pb-8">
