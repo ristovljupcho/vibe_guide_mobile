@@ -53,7 +53,7 @@ export default function LoginScreen({ onForgotPassword, onRegister }: LoginScree
             <button
               type="button"
               onClick={onForgotPassword}
-              className="font-color text-sm hover:text-white transition-colors"
+              className="font-color cursor-pointer text-sm hover:text-white transition-colors"
             >
               Forgot password?
             </button>
@@ -61,7 +61,7 @@ export default function LoginScreen({ onForgotPassword, onRegister }: LoginScree
 
           <Button
             type="submit"
-            className="w-full btn-color hover:bg-amber-300 text-slate-800 font-medium py-3 rounded-full"
+            className="w-full btn-color cursor-pointer hover:bg-amber-300 text-slate-800 font-medium py-3 rounded-full"
           >
             LOGIN
           </Button>
@@ -71,7 +71,7 @@ export default function LoginScreen({ onForgotPassword, onRegister }: LoginScree
         <div className="text-center">
           <p className="font-color text-sm">
             Don&apos;t have an account?{" "}
-            <button onClick={onRegister} className="text-white underline hover:no-underline">
+            <button onClick={onRegister} className="text-white cursor-pointer  underline hover:no-underline">
               Register
             </button>
           </p>
