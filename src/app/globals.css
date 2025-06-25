@@ -219,6 +219,7 @@ body {
   }
 }
 
+@import "keen-slider/keen-slider.min.css";
 .bg-color {
   background-color: #304040;
 }

@@ -1,14 +1,13 @@
-import React from "react";
-import Image from "next/image";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { Star } from "lucide-react";
 
-type PlaceCardProps = {
-  imageSrc: StaticImageData;
+interface PlaceCardProps {
+  imageSrc: string | StaticImageData;
   name: string;
   rating: number;
   primaryType: string;
   topTraits: string[];
-};
+}
 
 export default function PlaceCard({
   imageSrc,
@@ -18,27 +17,39 @@ export default function PlaceCard({
   topTraits,
 }: PlaceCardProps) {
   return (
-    <div className="bg-[#202824] rounded-3xl w-[230px] shadow-md overflow-hidden text-white">
-      <Image
-        src={imageSrc}
-        alt="Logo"
-        width={150}
-        height={75}
-        className="block"
-      />
+    <div className="form-color rounded-2xl shadow-md hover:shadow-xl transition-shadow w-full max-w-sm overflow-hidden">
+      <div className="relative h-48 w-full">
+        <Image
+          src={imageSrc}
+          alt={name}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-t-2xl"
+        />
+      </div>
       <div className="p-4">
-        <h2 className="text-xl font-serif">{name}</h2>
-        <p className="text-md text-gray-300">{rating}</p>
-        <p className="text-md text-gray-300">{primaryType}</p>
-        {topTraits.map((trait, index) => (
-          <a
-            key={index}
-            href="#"
-            className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-gray-600"
-          >
-            {trait}
-          </a>
-        ))}
+        <div className="text-lg font-color">{name}</div>
+        <div className="text-sm font-color mb-1 capitalize">{primaryType}</div>
+        <div className="flex items-center gap-1 text-yellow-500 mb-2">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              size={16}
+              fill={i < Math.round(rating) ? "currentColor" : "none"}
+            />
+          ))}
+          <span className="text-sm font-color ml-1">({rating.toFixed(1)})</span>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {topTraits.map((trait, i) => (
+            <span
+              key={i}
+              className="bg-color font-color text-xs font-medium px-2.5 py-0.5 rounded-full"
+            >
+              {trait}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
