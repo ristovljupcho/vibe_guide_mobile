@@ -3,19 +3,19 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 type PlaceCardProps = {
-  imageSrc: StaticImageData;
   name: string;
   rating: number;
   primaryType: string;
   topTraits: string[];
+  imageSrc: StaticImageData;
 };
 
 export default function PlaceCard({
-  imageSrc,
   name,
   rating,
   primaryType,
   topTraits,
+  imageSrc,
 }: PlaceCardProps) {
   return (
     <div className="bg-[#202824] rounded-3xl w-[230px] shadow-md overflow-hidden text-white">
