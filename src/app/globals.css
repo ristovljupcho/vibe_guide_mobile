@@ -219,6 +219,7 @@ body {
   }
 }
 
+/* CUSTOM BACKGROUND COLORS */
 .bg-color {
   background-color: #304040;
 }
@@ -227,11 +228,23 @@ body {
   background-color: #243030;
 }
 
-
 .btn-color {
   background-color: #f6dec2;
 }
 
+/* CUSTOM TEXT COLORS */
 .font-color {
   color: #f6dec2;
+}
+
+.text-color {
+  color: #f6dec2;
+}
+
+.small-text-color {
+  color: #faeddf;
+}
+
+.description-text-color {
+  color: #fffbf8;
 }
