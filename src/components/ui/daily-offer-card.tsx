@@ -32,18 +32,18 @@ export default function DailyOfferCard({
   return (
     <div className="relative w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-lg">
       <Image src={imageSrc} alt={name} fill className="object-cover" priority />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/65 to-transparent" />
       {isToday && (
         <div className="absolute top-3 left-3 bg-green-200 text-green-900 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
           AVAILABLE NOW
         </div>
       )}
       <div className="absolute bottom-3 left-3 right-3 text-color">
-        <h2 className="text-lg font-semibold">{name}</h2>
-        <p className="text-sm small-text-color">
+        <h2 className="main-text font-semibold">{name}</h2>
+        <p className="information-text">
           {formatTime(start)} - {formatTime(end)}
         </p>
-        <p className="text-sm small-text-color line-clamp-1">{description}</p>
+        <p className="description-text line-clamp-1">{description}</p>
       </div>
     </div>
   );

@@ -248,3 +248,19 @@ body {
 .description-text-color {
   color: #fffbf8;
 }
+
+/* CUSTOM FULL CSS FOR TEXT */
+.main-text {
+  font-size: large;
+  color: #f6dec2;
+}
+
+.information-text {
+  font-size: small;
+  color: #faeddf;
+}
+
+.description-text {
+  font-size: x-small;
+  color: #faeddf;
+}
