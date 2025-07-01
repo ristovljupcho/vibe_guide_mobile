@@ -264,3 +264,12 @@ body {
   font-size: x-small;
   color: #faeddf;
 }
+
+.traits-text {
+  font-size: small;
+  color: #faeddf;
+}
+
+.traits-text:hover {
+  color: goldenrod;
+}
